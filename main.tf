@@ -16,3 +16,15 @@ terraform {
     }
   }
 }
+
+
+resource "helm_release" "traefik" {
+  name              = "traefik"
+  chart             = "traefik"
+  repository        = "https://helm.traefik.io/traefik"
+  namespace         = "default"
+  create_namespace  = false
+  lint              = false
+  version           = "11.0.1"
+  skip_crds         = false
+}
