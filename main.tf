@@ -25,6 +25,6 @@ resource "helm_release" "traefik" {
   namespace         = "default"
   create_namespace  = false
   lint              = false
-  version           = "11.0.1"
+  version           = "11.1.1"
   skip_crds         = false
 }
